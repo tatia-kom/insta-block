@@ -1,0 +1,240 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Снимаем блокировку в инстаграм
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+        link(rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        section.top
+            div.top__left-img1
+                img(src="img/top1.png" alt="")
+            div.top__left-img2
+                img(src="img/top2.png" alt="")
+            div.top__right-img
+                img(src="img/top-right.png" alt="")
+            h1.top__title Снимаем блокировку<br />в
+            img.top__logo(src="img/insta.svg" alt="Instagram")
+            div.top__text Наша компания - это группа профессионалов в сфере восстановления аккаунтов instagram,  имеющая 10-ти летний опыт работы. Целью компании является оказание всесторонненй помощи и поддержки пользователей которые столкнулись с блокировкой своего аккаунта.
+            button.top__button.button.modal-open Нужна помощь
+
+            div.top-advantages
+                div.top-advantages__item
+                    div.top-advantages__icon.icon
+                        img(src="img/top-icon1.svg" alt="")
+                    p.top-advantages__text Самые низкие цены в интернете
+                div.top-advantages__item
+                    div.top-advantages__icon.icon
+                        img(src="img/top-icon2.svg" alt="")
+                    p.top-advantages__text Максимально быстрое возвращение аккаунта
+                div.top-advantages__item
+                    div.top-advantages__icon.icon
+                        img(src="img/top-icon3.svg" alt="")
+                    p.top-advantages__text Оплата только после восстановления аккаунта
+                div.top-advantages__item
+                    div.top-advantages__icon.icon
+                        img(src="img/top-icon4.svg" alt="")
+                    p.top-advantages__text Бесплатное восстановление при повторной блокировке. Мы ценим наших клиентов
+
+        section.services#services
+            h2.title Наши услуги
+            div.services__flex
+                div.services__img
+                    img(src="img/services.png" alt="")
+                div.services__content
+                    div.services-item
+                        div.services-item__icon.icon
+                            img(src="img/service1.svg" alt="")
+                        p.services-item__text Восстановление аккаунта
+                    div.services-item
+                        div.services-item__icon.icon
+                            img(src="img/service2.svg" alt="")
+                        p.services-item__text Блокировка аккаунта
+                    div.services-item
+                        div.services-item__icon.icon
+                            img(src="img/service3.svg" alt="")
+                        p.services-item__text Получение резервного кода
+                    div.services-item
+                        div.services-item__icon.icon
+                            img(src="img/service4.svg" alt="")
+                        p.services-item__text Получение СМС
+                    button.services__button.button.modal-open Заказать услугу
+
+        section.price#price
+            h2.title Стоимость
+            p.text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить
+            div.price__content
+                div.price-item
+                    div.icon
+                        img(src="img/price-icon1.svg" alt="")
+                    div.price-item__title Эконом
+                    div.price-item__cost от 3 000 руб.
+                    p.price-item__detail Получение СМС
+                    p.price-item__detail Получение резервного кода
+                    button.price-item__button.button.button--disabled.modal-open Заказать услугу
+                div.price-item.price-item--active.price-item--premium
+                    div.icon
+                        img(src="img/price-icon2.svg" alt="")
+                    div.price-item__title Премиум
+                    div.price-item__cost от 8 000 руб.
+                    p.price-item__detail Восстановление аккаунта в сложных случаях*
+                    p.price-item__detail Сопровождение 24/7
+                    p.price-item__detail Бесплатное восстановление при повторной блокировке
+                    button.price-item__button.button.modal-open Заказать услугу
+                div.price-item
+                    div.icon
+                        img(src="img/price-icon3.svg" alt="")
+                    div.price-item__title Стандарт
+                    div.price-item__cost от 5 000 руб.
+                    p.price-item__detail Стандартное восстановление аккаунта
+                    p.price-item__detail Бесплатное восстановление при повторной блокировке
+                    button.price-item__button.button.button--disabled.modal-open Заказать услугу
+
+        section.reviews#reviews
+            h2.title Отзывы от наших клиентов
+            p.text.reviews__text Мы работаем с 2012 года, и у нас уже сотни хороших отзывов, нам доверяют свои данные и не переживают за их конфиденциальность. Если Вы сомневаетесь, можете посмотреть отзывы реальных людей в соц сети <a href="" target="_blank">Вконтакте</a> и убедиться, что Ваш аккаунт, как и сотни других, будет успешно восстановлен!
+            div.reviews__content.container
+                div.owl-carousel
+                    div.reviews-item
+                        div.reviews-item__header
+                            div.reviews-item__photo
+                                img(src="img/ava1.png" alt="")
+                            div.reviews-item__name
+                                span Юля Юлина
+                                | г. Москва
+                            div.reviews-item__stars
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                        div.reviews-item__text
+                            p Мы готовы петь песни благодарности Артему всем нашим коллективом! Огромное спасибо! За 10 минут восстановил аккаунт, когда другие обещали до 30 дней!Только огромная рекомендация! Теперь навсегда в наших заметках!
+                            p Спасибо магазину за столь невероятную зелень по приятной стоимости.
+                        p.reviews-item__date 15.10.2022
+                    div.reviews-item
+                        div.reviews-item__header
+                            div.reviews-item__photo
+                                img(src="img/ava1.png" alt="")
+                            div.reviews-item__name
+                                span Юля Юлина
+                                | г. Москва
+                            div.reviews-item__stars
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                        div.reviews-item__text
+                            p Мы готовы петь песни благодарности Артему всем нашим коллективом! Огромное спасибо! За 10 минут восстановил аккаунт, когда другие обещали до 30 дней!Только огромная рекомендация! Теперь навсегда в наших заметках!
+                            p Спасибо магазину за столь невероятную зелень по приятной стоимости.
+                        p.reviews-item__date 15.10.2022
+                    div.reviews-item
+                        div.reviews-item__header
+                            div.reviews-item__photo
+                                img(src="img/ava1.png" alt="")
+                            div.reviews-item__name
+                                span Юля Юлина
+                                | г. Москва
+                            div.reviews-item__stars
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                        div.reviews-item__text
+                            p Мы готовы петь песни благодарности Артему всем нашим коллективом! Огромное спасибо! За 10 минут восстановил аккаунт, когда другие обещали до 30 дней!Только огромная рекомендация! Теперь навсегда в наших заметках!
+                            p Спасибо магазину за столь невероятную зелень по приятной стоимости.
+                        p.reviews-item__date 15.10.2022
+                    div.reviews-item
+                        div.reviews-item__header
+                            div.reviews-item__photo
+                                img(src="img/ava1.png" alt="")
+                            div.reviews-item__name
+                                span Юля Юлина
+                                | г. Москва
+                            div.reviews-item__stars
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                        div.reviews-item__text
+                            p Мы готовы петь песни благодарности Артему всем нашим коллективом! Огромное спасибо! За 10 минут восстановил аккаунт, когда другие обещали до 30 дней!Только огромная рекомендация! Теперь навсегда в наших заметках!
+                            p Спасибо магазину за столь невероятную зелень по приятной стоимости.
+                        p.reviews-item__date 15.10.2022
+                    div.reviews-item
+                        div.reviews-item__header
+                            div.reviews-item__photo
+                                img(src="img/ava1.png" alt="")
+                            div.reviews-item__name
+                                span Юля Юлина
+                                | г. Москва
+                            div.reviews-item__stars
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                                img(src="img/star.svg" alt="")
+                        div.reviews-item__text
+                            p Мы готовы петь песни благодарности Артему всем нашим коллективом! Огромное спасибо! За 10 минут восстановил аккаунт, когда другие обещали до 30 дней!Только огромная рекомендация! Теперь навсегда в наших заметках!
+                            p Спасибо магазину за столь невероятную зелень по приятной стоимости.
+                        p.reviews-item__date 15.10.2022
+
+                div.reviews__navigation
+                    button.reviews__prev
+                    div.reviews__dots
+                    button.reviews__next
+                    a.reviews__link(href="" target="_blank") Отзывы в VK
+
+        section.faq#faq
+            div.container
+                h2.title Частые вопросы
+                div.faq__content
+                    div.faq-item.faq-item--opened
+                        div.faq-item__question
+                            p Как разблокировать аккаунт Instagram
+                            button.faq-item__trigger
+                        div.faq-item__answer
+                            p Блокировка аккаунта Instagram в наше время не редкость, c ней можно столкнуться совершенно случайно, даже если Вы ничего и не нарушали.
+                            p Причин блокировки может быть масса, начиная от неудачного стечения обстоятельств и заканчивая злостными нарушениями правил пользовательского соглашения социальной сети.
+                            p В данной статье мы не будем вдаваться в подробности причин блокировки, а разберемся в её видах и пошагово изучим как восстановить заблокированный аккаунт.
+                    div.faq-item
+                        div.faq-item__question
+                            p Виды блокировок
+                            button.faq-item__trigger
+                        div.faq-item__answer
+                            p Тут текст
+                    div.faq-item
+                        div.faq-item__question
+                            p За что банит Инстаграм
+                            button.faq-item__trigger
+                        div.faq-item__answer
+                            p Тут текст
+                    div.faq-item
+                        div.faq-item__question
+                            p Оплата услуг
+                            button.faq-item__trigger
+                        div.faq-item__answer
+                            p Тут текст
+                    div.faq-item
+                        div.faq-item__question
+                            p Гарантии
+                            button.faq-item__trigger
+                        div.faq-item__answer
+                            p Тут текст
+                button.button.faq-item__button.modal-open Нужна помощь
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // MODAL
+        include ../components/modal.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug

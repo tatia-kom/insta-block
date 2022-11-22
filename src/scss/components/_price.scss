@@ -1,0 +1,146 @@
+.price {
+  margin-top: 80px;
+  padding-bottom: 150px;
+
+  @media (max-width: $md) {
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 0 12px 80px;
+  }
+
+  &__content {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 576px;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+      height: auto;
+      padding: 0 40px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 0;
+    }
+  }
+}
+
+.price-item {
+  width: 354px;
+  height: 528px;
+  flex-shrink: 0;
+  background: $greyBackground;
+  border-radius: 20px;
+  padding: 41px 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: $md) {
+    width: calc(100vw/3 - 50px);
+  }
+
+  @media (max-width: $sm) {
+    width: 100%;
+    height: auto;
+  }
+
+  & + .price-item {
+    margin-left: 40px;
+
+    @media (max-width: $sm) {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+
+  &--active {
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    height: 576px;
+
+    @media (max-width: $sm) {
+      height: auto;
+    }
+  }
+
+  &--premium {
+    &:after {
+      content: 'Популярное';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 32px;
+      right: -35px;
+      color: white;
+      background: #E1306C;
+      transform: rotate(47.1deg);
+      width: 150px;
+      height: 27px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-family: $fontBold;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__cost {
+    margin: 40px 0 28px;
+    font-family: $fontBold;
+    font-size: 40px;
+    line-height: 47px;
+
+    @media (max-width: $md) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 47px;
+      margin: 24px 0 12px;
+    }
+  }
+
+  &__detail {
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+    position: relative;
+    text-align: center;
+  }
+
+  &__detail + .price-item__detail {
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 60px;
+      height: 1px;
+      background: #EAEAEA;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+
+    @media (max-width: $sm) {
+      margin-top: 40px;
+    }
+  }
+}

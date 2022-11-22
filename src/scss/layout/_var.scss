@@ -1,0 +1,37 @@
+//fonts
+$font: 'TT Norms Regular';
+$fontBold: 'TT Norms Bold';
+
+//colors
+
+$black: #3F3F3F;
+$greyBackground: #F8F8FA;
+$textColor: #7B828E;
+
+$buttonGradient: linear-gradient(84.8deg, #833AB4 -1.92%, #C13584 34.92%, #E1306C 62.82%, #E08F53 97.56%);
+
+//media
+
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}
