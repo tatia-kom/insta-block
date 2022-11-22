@@ -27,6 +27,7 @@ $(document).ready(function() {
 
     $('.faq-item__trigger').click(function(e) {
         e.preventDefault();
+        $('.faq-item--opened').removeClass('faq-item--opened');
         $(this).parents('.faq-item').toggleClass('faq-item--opened');
     });
 

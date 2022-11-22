@@ -96,6 +96,32 @@
   &__icon {
     width: 46px;
     height: 46px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      opacity: 30%;
+      transform: translateX(-100%);
+      transition: 0.3s;
+    }
+
+    &:hover {
+      &:before {
+        transform: translateX(0);
+      }
+    }
+
+    img {
+      position: relative;
+    }
   }
 
   &__icon + .modal__icon {
