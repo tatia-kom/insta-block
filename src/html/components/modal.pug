@@ -10,16 +10,20 @@ div.modal
                 img(src="img/vk.svg" alt="VK")
             a.icon.modal__icon(href="https://t.me/instahelprus" target="_blank")
                 img(src="img/direct.svg" alt="Telegram")
-        div.modal__title Оставить заявку
-        form.modal-form
-            div.modal-form__item
-                label.modal-form__label Ваше имя
-                input.modal-form__input(placeholder="Введите Ваше имя")
-            div.modal-form__item
-                label.modal-form__label Ваш телефон
-                input.modal-form__input(placeholder="+7 (ххх) ххх-хх-хх")
-            div.modal-form__item
-                label.modal-form__label Комментарий
-                textarea.modal-form__textarea
-            button.button.modal-form__button Отправить
-        p.modal__note После нажатия вы подтверждаете согласие на обработку персональных данных
+        div.modal__form
+            div.modal__title Оставить заявку
+            form.modal-form#modalForm
+                div.modal-form__item
+                    label.modal-form__label Ваше имя
+                    input.modal-form__input(placeholder="Введите Ваше имя" name="name")
+                div.modal-form__item
+                    label.modal-form__label Ваш телефон
+                    input.modal-form__input(placeholder="+7 (ххх) ххх-хх-хх" name="phone")
+                div.modal-form__item
+                    label.modal-form__label Комментарий
+                    textarea.modal-form__textarea(name="comment")
+                button.button.modal-form__button(type="submit") Отправить
+            p.modal__note После нажатия вы подтверждаете согласие на обработку персональных данных
+        div.modal__success.hidden
+            div.modal__title Спасибо!
+            div.modal__success-text Ваша заявка принята, мы скоро с Вами свяжемся.

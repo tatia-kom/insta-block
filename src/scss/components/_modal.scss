@@ -144,6 +144,11 @@
     color: $textColor;
     max-width: 314px;
   }
+
+  &__success-text {
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 
 .modal-form {

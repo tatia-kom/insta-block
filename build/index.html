@@ -320,23 +320,29 @@
         <div class="modal__header">
           <p class="modal__text"><span>Круглосуточно</span>Онлайн консультация</p><a class="icon modal__icon" href="https://vk.com/artem_suhov" target="_blank"><img src="img/vk.svg" alt="VK"></a><a class="icon modal__icon" href="https://t.me/instahelprus" target="_blank"><img src="img/direct.svg" alt="Telegram"></a>
         </div>
-        <div class="modal__title">Оставить заявку</div>
-        <form class="modal-form">
-          <div class="modal-form__item">
-            <label class="modal-form__label">Ваше имя</label>
-            <input class="modal-form__input" placeholder="Введите Ваше имя">
-          </div>
-          <div class="modal-form__item">
-            <label class="modal-form__label">Ваш телефон</label>
-            <input class="modal-form__input" placeholder="+7 (ххх) ххх-хх-хх">
-          </div>
-          <div class="modal-form__item">
-            <label class="modal-form__label">Комментарий</label>
-            <textarea class="modal-form__textarea"></textarea>
-          </div>
-          <button class="button modal-form__button">Отправить</button>
-        </form>
-        <p class="modal__note">После нажатия вы подтверждаете согласие на обработку персональных данных</p>
+        <div class="modal__form">
+          <div class="modal__title">Оставить заявку</div>
+          <form class="modal-form" id="modalForm">
+            <div class="modal-form__item">
+              <label class="modal-form__label">Ваше имя</label>
+              <input class="modal-form__input" placeholder="Введите Ваше имя" name="name">
+            </div>
+            <div class="modal-form__item">
+              <label class="modal-form__label">Ваш телефон</label>
+              <input class="modal-form__input" placeholder="+7 (ххх) ххх-хх-хх" name="phone">
+            </div>
+            <div class="modal-form__item">
+              <label class="modal-form__label">Комментарий</label>
+              <textarea class="modal-form__textarea" name="comment"></textarea>
+            </div>
+            <button class="button modal-form__button" type="submit">Отправить</button>
+          </form>
+          <p class="modal__note">После нажатия вы подтверждаете согласие на обработку персональных данных</p>
+        </div>
+        <div class="modal__success hidden">
+          <div class="modal__title">Спасибо!</div>
+          <div class="modal__success-text">Ваша заявка принята, мы скоро с Вами свяжемся.</div>
+        </div>
       </div>
     </div>
     <!-- SCRIPTS--><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
