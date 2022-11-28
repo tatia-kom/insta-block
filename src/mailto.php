@@ -4,7 +4,7 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $comment = $_POST['comment'];
 
-$to      = 'tatia.kom@yandex.ru';
+$to      = 'instahelpsrus@gmail.com';
 $subject = 'Заявка с сайта InstaHelp';
 $message = '
                 <html>

@@ -130,8 +130,8 @@ $(document).ready(function() {
             success: function() {
                 $('.modal__form').addClass('hidden');
                 $('.modal__success').removeClass('hidden');
-                form.find('input').value('');
-                form.find('textarea').value('');
+                $('.modal-form input').val('');
+                $('.modal-form textarea').val('');
             }
         });
     });
