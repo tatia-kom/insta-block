@@ -30,12 +30,12 @@
     border-radius: 8px;
     box-shadow: 60px 40px 200px rgba(123, 121, 121, 0.35);
     padding: 32px;
-    width: 450px;
+    width: 464px;
     position: relative;
 
     @media (max-width: $xs) {
       width: calc(100vw - 24px);
-      padding: 12px 12px 18px;
+      padding: 12px 12px 32px;
       overflow: auto;
       max-height: 100vh;
     }
@@ -55,79 +55,6 @@
     }
   }
 
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 48px;
-    position: relative;
-
-    @media (max-width: $xs) {
-      display: none;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      background: #DADBDD;
-      width: 100px;
-      height: 1px;
-      left: 50%;
-      bottom: -24px;
-      transform: translateX(-50%);
-    }
-  }
-
-  &__text {
-    font-size: 16px;
-    line-height: 19px;
-    text-align: right;
-    margin-right: 32px;
-
-    span {
-      display: block;
-      font-size: 14px;
-      line-height: 17px;
-      color: $textColor;
-    }
-  }
-
-  &__icon {
-    width: 46px;
-    height: 46px;
-    position: relative;
-    overflow: hidden;
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: white;
-      opacity: 30%;
-      transform: translateX(-100%);
-      transition: 0.3s;
-    }
-
-    &:hover {
-      &:before {
-        transform: translateX(0);
-      }
-    }
-
-    img {
-      position: relative;
-    }
-  }
-
-  &__icon + .modal__icon {
-    margin-left: 34px;
-  }
-
   &__title {
     font-family: $fontBold;
     font-size: 24px;
@@ -136,7 +63,7 @@
     text-align: center;
   }
 
-  &__note {
+  &__text {
     margin: 32px auto 0;
     text-align: center;
     font-size: 14px;
@@ -144,63 +71,92 @@
     color: $textColor;
     max-width: 314px;
   }
-
-  &__success-text {
-    margin-top: 20px;
-    text-align: center;
-  }
 }
 
-.modal-form {
+.modal-buttons {
+  margin-top: 64px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    width: 100px;
+    height: 1px;
+    background: #DADBDD;
+    transform: translateX(-50%);
+  }
 
   &__item {
-    margin-top: 20px;
-    width: 100%;
+    flex-shrink: 0;
   }
 
-  &__label {
-    display: block;
-    font-size: 16px;
-    line-height: 19px;
-    color: #333;
-  }
-
-  &__label + input,
-  &__label + textarea {
-    margin-top: 8px;
-  }
-
-  &__input {
-    width: 100%;
-    height: 51px;
-    background: #F2F2F2;
-    border-radius: 10px;
-    border: 0;
-    padding: 0 24px;
-    font-family: $font;
-    font-size: 16px;
-    line-height: 19px;
-
-    @include placeholderColor(rgba(0, 0, 0, 0.25));
-  }
-
-  &__textarea {
-    background: #F2F2F2;
-    border-radius: 10px;
-    width: 100%;
-    height: 90px;
-    border: 0;
-    resize: none;
-    padding: 16px 24px;
-    font-family: $font;
-    font-size: 16px;
-    line-height: 19px;
+  &__name {
+    font-size: 12px;
+    line-height: 14px;
+    color: $textColor;
+    margin-bottom: 11px;
   }
 
   &__button {
-    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 46px;
+    background: linear-gradient(321.7deg, #EEEEF0 24.16%, #F7F7FF 84.43%);
+    border-radius: 9px;
+    border: 1px solid white;
+    box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.5), inset 10px 10px 20px #E0E1E3, -4px -4px 8px rgba(255, 255, 255, 0.5), 6px 6px 6px rgba(218, 219, 221, 0.25), 8px 8px 30px #DADBDD, -6px -6px 20px #FCFDFF;
+    transition: 0.3s;
+
+    @media (max-width: $xs) {
+      width: 81px;
+    }
+
+    &--vk {
+      width: 130px;
+      background: linear-gradient(313.26deg, #1C77FF 16.28%, #00C2FF 96.44%);
+      box-shadow: inset -10px -10px 20px rgba(168, 211, 251, 0.5), inset 10px 10px 20px rgba(21, 102, 177, 0.8), -4px -4px 8px rgba(255, 255, 255, 0.5), 6px 6px 6px rgba(218, 219, 221, 0.25), 8px 8px 30px #DADBDD, -6px -6px 20px #FCFDFF;
+
+      @media (max-width: $xs) {
+        width: 111px;
+      }
+
+      &:hover {
+        background: linear-gradient(321.7deg, #EEEEF0 24.16%, #F7F7FF 84.43%);
+        box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.5), inset 10px 10px 20px #E0E1E3, -4px -4px 8px rgba(255, 255, 255, 0.5), 6px 6px 6px rgba(218, 219, 221, 0.25), 8px 8px 30px #DADBDD, -6px -6px 20px #FCFDFF;
+
+        svg path {
+          fill: #2D81E0;
+        }
+      }
+    }
+
+    &--tg {
+      &:hover {
+        background: linear-gradient(321.7deg, #59A4F9 24.16%, #59A4F9 84.43%);
+        box-shadow: inset -10px -10px 20px #2D81E0, inset 10px 10px 20px #2A65A8, -4px -4px 8px rgba(255, 255, 255, 0.5), 6px 6px 6px rgba(218, 219, 221, 0.25), 8px 8px 30px #DADBDD, -6px -6px 20px #FCFDFF;
+
+        svg path {
+          fill: white;
+        }
+      }
+    }
+
+    &--wa {
+      &:hover {
+        background: linear-gradient(321.7deg, #55CD6C 24.16%, #55CD6C 84.43%);
+        box-shadow: inset -10px -10px 20px #41B959, inset 10px 10px 20px #08912F, -4px -4px 8px rgba(255, 255, 255, 0.5), 6px 6px 6px rgba(218, 219, 221, 0.25), 8px 8px 30px #DADBDD, -6px -6px 20px #FCFDFF;
+
+        svg path {
+          fill: white;
+        }
+      }
+    }
   }
 }
