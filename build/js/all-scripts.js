@@ -94,8 +94,6 @@ $(document).ready(function() {
         e.preventDefault();
 
         $('.modal').removeClass('modal--opened');
-        $('.modal__form').removeClass('hidden');
-        $('.modal__success').addClass('hidden');
         $('body').removeClass('fixed');
     });
 
@@ -103,8 +101,6 @@ $(document).ready(function() {
         e.preventDefault();
 
         $('.modal').removeClass('modal--opened');
-        $('.modal__form').removeClass('hidden');
-        $('.modal__success').addClass('hidden');
         $('body').removeClass('fixed');
     });
 
@@ -120,26 +116,5 @@ $(document).ready(function() {
             $('.header').removeClass('header--scroll');
         }
 
-    });
-
-    // form
-
-    $('#modalForm').submit(function(event) {
-        event.preventDefault();
-
-        var form = $(this);
-        var serializedData = form.serialize();
-
-        $.ajax({
-            url: "/mailto.php",
-            type: "POST",
-            data: serializedData,
-            success: function() {
-                $('.modal__form').addClass('hidden');
-                $('.modal__success').removeClass('hidden');
-                $('.modal-form input').val('');
-                $('.modal-form textarea').val('');
-            }
-        });
     });
 });
